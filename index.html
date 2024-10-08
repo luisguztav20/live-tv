@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />    
+
+</head>
+  <body>
+    
+    <div class="container my-5 ">
+        <div class="d-flex flex-row w-75 justify-content-around m-auto gap-5">
+            <input class="form-control w-75" type="text" placeholder="Default input" id="link">
+            <button class="btn  btn-primary" onclick="">Cargar link</button>
+        </div>
+        <div id="contenedor"></div>
+        <div class="my-5 m-auto d-flex justify-content-center">
+          <video
+          id="miVideo"
+          class="video-js vjs-default-skin"
+          controls
+          preload="auto"
+          width="640"
+          height="264"
+          data-setup="{}">
+            <source src="https://telecorporacion-es.cdn.vustreams.com/live/9c79f472-bb4d-4ab8-848f-eb613f3b1f96/live.isml/live.m3u8" type="application/x-mpegURL" />
+            <!-- Texto alternativo si el navegador no soporta Video.js -->
+            Tu navegador no soporta videos HTML5.
+        </video>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+<!-- Plugin de HLS para Video.js (VHS) -->
+    <script src="https://cdn.jsdelivr.net/npm/videojs-http-streaming@2.12.1/dist/videojs-http-streaming.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
